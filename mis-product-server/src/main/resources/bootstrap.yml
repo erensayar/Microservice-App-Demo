@@ -1,0 +1,30 @@
+server:
+  port: ${SERVER_PORT:6003}
+
+spring:
+  application:
+    name: mas-product-server
+
+  zipkin:
+    base-url: ${ZIPKIN_SERVER_URL:http://localhost:7004}
+
+  profiles:
+    active: ${PROFILE:DEV}
+
+  cloud:
+    config:
+      profile: native
+      uri: ${CONFIG_SERVER_URL:http://localhost:7000}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:7001/eureka/}

@@ -1,0 +1,27 @@
+erver:
+  port: ${SERVER_PORT:7001}
+
+spring:
+  application:
+    name: mas-eureka-server
+
+  zipkin:
+    base-url: ${ZIPKIN_SERVER_URL:http://localhost:7004}
+
+  boot:
+    admin:
+      client:
+        url: ${SPRING_BOOT_ADMIN_SERVER_URL:http://localhost:8508}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:7001/eureka/}

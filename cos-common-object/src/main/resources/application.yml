@@ -1,0 +1,8 @@
+micro-service-demo:
+  apigw:
+    baseurl: 127.0.0.1
+    user-uri: 6000
+    campaign-uri: 6001
+    notification-uri: :6002
+    product-uri: 6003
+

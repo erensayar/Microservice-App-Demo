@@ -1,0 +1,36 @@
+server:
+  port: ${CONFIG_SERVER_PORT:7000}
+
+spring:
+  application:
+    name: mas-config-server
+  zipkin:
+    base-url: ${ZIPKIN_SERVER_URL:http://localhost:7004}
+
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/configfiles
+
+  profiles:
+    active: native
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
+    metadata-map:
+      startup: ${random.int}    #needed to trigger info and endpoint update after restart
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER_URL:http://localhost:7001/eureka/}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS

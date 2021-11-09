@@ -1,0 +1,3 @@
+* checkstyle'ı gözden geçir
+* config serverdan sunulan config file'lar içinde belirttiğim konfigürasyonları tekrar bootstrap.yml içinde belirttim bunun olmaması gerek. config serverda bir problem olduğu için geçici olarak ekledim. düzeltilmeli.
+*

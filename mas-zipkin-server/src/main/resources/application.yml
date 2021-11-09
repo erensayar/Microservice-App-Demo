@@ -1,0 +1,14 @@
+server:
+  port: ${ZIPKIN_SERVER_PORT:7004}
+
+spring:
+  application:
+    name: mas-zipkin-server
+  profiles:
+    active: native
+
+management:
+  metrics:
+    web:
+      server:
+        auto-time-requests: false

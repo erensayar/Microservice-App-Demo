@@ -1,0 +1,17 @@
+server:
+  port: ${SERVER_PORT:7001}
+
+spring:
+  application:
+    name: mas-eureka-server
+
+  zipkin:
+    base-url: ${ZIPKIN_SERVER_URL:http://localhost:7004}
+
+  profiles:
+    active: ${PROFILE:DEV}
+
+  cloud:
+    config:
+      profile: native
+      uri: ${CONFIG_SERVER_URL:http://localhost:7000}
