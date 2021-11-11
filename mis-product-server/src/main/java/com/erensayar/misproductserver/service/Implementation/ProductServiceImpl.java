@@ -65,7 +65,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
     /**
-     * This is necessary because we cant create and update process with original object, directly.
+     * This is necessary because we cant create or update with original object, directly.
      * We need take dto then create real object. Otherwise it can cause be vulnerability.
      */
     private Product converter(ProductDto productDto) {

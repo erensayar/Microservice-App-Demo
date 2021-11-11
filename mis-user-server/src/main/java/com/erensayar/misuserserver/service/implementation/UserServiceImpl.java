@@ -61,6 +61,10 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    /**
+     * This is necessary because we cant create or update with original object, directly.
+     * We need take dto then create real object. Otherwise it can cause be vulnerability.
+     */
     private User converter(UserDto userDto) {
         return User.builder()
                 .id(userDto.getId())

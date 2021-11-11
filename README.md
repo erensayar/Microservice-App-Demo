@@ -32,7 +32,7 @@ Requirements Setup For GNU/Linux:
 Java:
 
     $ sudo apt-get update \
-    && sudo apt-get install openjdk-8-jdk \
+    && sudo apt install openjdk-11-jdk \
     && java -version
 
 Maven:
@@ -46,7 +46,7 @@ Maven:
 
 * Then extract.
 
-* Give name without space to files. (Java File: OpenJDK-1.8 | Maven: Maven)
+* Give name without space to files. (Java File: OpenJDK-11 | Maven: Maven)
 
 * Then move files to any where permanently.
 
