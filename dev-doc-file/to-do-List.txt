@@ -1,4 +1,9 @@
+YAPILACAKLAR:
+
+* backend parent dosyasını kullan
 * checkstyle'ı gözden geçir
-* config serverdan sunulan config file'lar içinde belirttiğim konfigürasyonları tekrar bootstrap.yml içinde belirttim bunun olmaması gerek. config serverda bir problem olduğu için geçici olarak ekledim. düzeltilmeli.
-* entityler için de swagger dökümantasyonu eklenmeli
+* config serverdan sunulan config file'lar içinde belirttiğim konfigürasyonları tekrar modül içinde bootstrap.yml yazdım bunun olmaması gerek. config serverda bir problem olduğu için geçici olarak uyguladım. düzeltilmeli.
+* iyi bir swagger dökümantasyonu eklenmeli
+* projelerin art arda çalışmasını sağlayacak bir script yazsam iyi olabilir development için
+* readme yazılmalı
 
