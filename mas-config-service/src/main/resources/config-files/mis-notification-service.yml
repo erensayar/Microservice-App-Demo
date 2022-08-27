@@ -15,7 +15,9 @@ spring:
     stream:
       bindings:
         input:
-          destination: notification-query
+          destination: new-campaign-broadcast-query # (internal) for communication with campaign module
+        output:
+          destination: notification-for-campaign # (external) for send notifications to customers
   rabbitmq:
     username: ${RABBIT_MQ_USERNAME:admin}
     password: ${RABBIT_MQ_PASSWORD:admin}

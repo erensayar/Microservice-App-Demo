@@ -9,12 +9,19 @@ import org.springframework.cloud.stream.messaging.Sink;
 @EnableBinding(Sink.class)
 public class NotificationServiceImpl implements NotificationService {
 
-
   @Override
   @StreamListener(Sink.INPUT)
-  public void pushNotification(NotificationDto notificationDtoList) {
-    System.out.println("Notifications sending...");
+  public NotificationDto consume(NotificationDto notificationDto) {
+    System.out.println("Campaigns received...");
+    System.out.println(notificationDto.toString());
+    return null;
     // TODO : Implementation
   }
+
+  @Override
+  public void produce(NotificationDto notificationDto) {
+    // TODO
+  }
+
 
 }

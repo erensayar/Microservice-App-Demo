@@ -8,7 +8,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 public interface NotificationServiceBase {
 
-  @PostMapping(value = "/api/v1/notifications", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-  ResponseEntity<String> pushNotification(@RequestBody NotificationDto notificationDtoList);
+  @PostMapping(value = "/api/v1/notifications/push",
+      consumes = MediaType.APPLICATION_JSON_VALUE,
+      produces = MediaType.APPLICATION_JSON_VALUE)
+  ResponseEntity<String> pushNotification(@RequestBody NotificationDto notificationDto);
 
 }
