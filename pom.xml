@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.erensayar</groupId>
+  <artifactId>microservice-app</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+  <name>microservice-app</name>
+  <description>Microservice App Demo</description>
+
+  <modules>
+    <module>coc-cloud-parent</module>
+    <module>coc-cloud-main-parent</module>
+    <module>coc-core-ms-app</module>
+    <module>application-gateway-service</module>
+    <module>mas-admin-service</module>
+    <module>mas-config-service</module>
+    <module>mas-eureka-service</module>
+    <module>mas-hystrix-service</module>
+    <module>mis-campaign-service</module>
+    <module>mis-notification-service</module>
+    <module>mis-product-service</module>
+    <module>mis-user-service</module>
+  </modules>
+
+</project>

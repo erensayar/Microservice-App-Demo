@@ -1,0 +1,43 @@
+server:
+  port: ${NOTIFICATION_SERVICE_PORT:8002}
+
+
+spring:
+  application:
+    name: mis-notification-service
+
+  boot:
+    admin:
+      client:
+        url: ${ADMIN_SERVICE_PORT:http://localhost:7002}
+
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: notification-query
+  rabbitmq:
+    username: ${RABBIT_MQ_USERNAME:admin}
+    password: ${RABBIT_MQ_PASSWORD:admin}
+
+  datasource:
+    username: sa
+    url: jdbc:h2:mem:notification-db
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:7001}/eureka

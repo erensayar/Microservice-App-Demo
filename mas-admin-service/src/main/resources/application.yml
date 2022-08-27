@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: mas-admin-service
+  config:
+    import: configserver:${CONFIG_SERVICE_URL:http://localhost:7000}

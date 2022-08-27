@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+
+  zipkin:
+    container_name: zipkin
+    image: 'openzipkin/zipkin'
+    ports:
+      - '9411:9411'
+
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management-alpine
+    #image: 'rabbitmq:3.8-management-alpine'
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
+    #volumes:
+    #  - /opt/docker-volume/rabbitmq/lib:/var/lib/rabbitmq/
+    #  - /opt/docker-volume/rabbitmq/log:/var/log/rabbitmq/
+    ports:
+      - '5672:5672'     # rabbitmq
+      - '15672:15672'   # rabbitmq management interface
