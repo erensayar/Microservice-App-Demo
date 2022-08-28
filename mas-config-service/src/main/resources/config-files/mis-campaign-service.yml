@@ -49,10 +49,7 @@ api:
   rabbit-mq:
     exchange:
       direct: ms.api.direct
-      topic: ms.api.topic
     queue:
       campaign: ms.api.campaign-query
-      notification: ms.api.notification-query
     routing-key:
       campaign: ms.api.campaign-routing-key
-      notification: ms.api.notification-routing-key
