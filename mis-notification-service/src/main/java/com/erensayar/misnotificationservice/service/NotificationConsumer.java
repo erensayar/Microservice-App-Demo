@@ -1,8 +1,7 @@
-package com.erensayar.misnotificationservice.service.implementation;
+package com.erensayar.misnotificationservice.service;
 
 import com.erensayar.cocCoreMsApp.notification.NotificationDto;
 import com.erensayar.misnotificationservice.config.rabbitMq.RabbitMqConstant;
-import com.erensayar.misnotificationservice.service.NotificationService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
@@ -12,18 +11,18 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @RequiredArgsConstructor
 @Service
-public class NotificationServiceImpl implements NotificationService {
+public class NotificationConsumer {
 
   private final RabbitTemplate rabbitTemplate;
   private final RabbitMqConstant rabbitMqConstant;
 
-  @Override
-  public void producer(NotificationDto notificationDto) {
-    log.info(notificationDto.toString());
-    rabbitTemplate.convertAndSend(
-        rabbitMqConstant.getExchange().getTopic(),
-        rabbitMqConstant.getRoutingKey().getNotification(),
-        notificationDto);
+  //@RabbitListener(queues = {"${api.rabbit-mq.queue.campaign}"})
+  @RabbitListener(queues = "ms.api.campaign-query")
+  public NotificationDto consumer(String x) {
+    System.out.println(x);
+    //log.info("Campaigns Received : " + notificationDto.toString());
+    return null;
+    // TODO : Implementation
   }
 
 
