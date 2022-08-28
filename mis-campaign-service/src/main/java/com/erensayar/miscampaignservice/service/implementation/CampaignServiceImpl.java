@@ -53,6 +53,7 @@ public class CampaignServiceImpl implements CampaignService {
     // Get Users By Product
     List<UserDto> user = userServiceFeignClient.getUsersByProductIdList(campaignDto.getProductIdList()).getBody();
     // Build NotificationDto And Push Notification
+    // TODO: Bu hali ise yaramaz. Burda her bir kullanici icin notification olustur ve oyle at kuyruga
     campaignNotificationService.pushCampaignNotification(NotificationDto.builder()
         .campaign(campaignDto)
         .users(user)

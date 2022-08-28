@@ -2,6 +2,7 @@ package com.erensayar.cocCoreMsApp.notification;
 
 import com.erensayar.cocCoreMsApp.campaign.CampaignDto;
 import com.erensayar.cocCoreMsApp.user.UserDto;
+import java.io.Serializable;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,7 +17,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @Builder
 @ToString
-public class NotificationDto {
+public class NotificationDto implements Serializable {
   private List<UserDto> users;
   private CampaignDto campaign;
 }

@@ -25,7 +25,7 @@ spring:
     stream:
       bindings:
         output:
-          destination: new-campaign-broadcast-query
+          destination: ms.api.campaign-query
   rabbitmq:
     username: ${RABBIT_MQ_USERNAME:admin}
     password: ${RABBIT_MQ_PASSWORD:admin}

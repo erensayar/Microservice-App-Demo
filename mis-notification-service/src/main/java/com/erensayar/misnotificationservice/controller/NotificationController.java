@@ -15,7 +15,7 @@ public class NotificationController implements NotificationServiceBase {
 
   @Override
   public ResponseEntity<String> pushNotification(NotificationDto notificationDto) {
-    notificationService.produce(notificationDto);
+    notificationService.producer(notificationDto);
     return ResponseEntity.ok(null);
   }
 

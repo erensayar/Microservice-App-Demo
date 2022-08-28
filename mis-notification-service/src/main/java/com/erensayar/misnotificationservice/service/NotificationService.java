@@ -4,8 +4,9 @@ import com.erensayar.cocCoreMsApp.notification.NotificationDto;
 
 public interface NotificationService {
 
-  void produce(NotificationDto notificationDto);
+  void producer(NotificationDto notificationDto);
 
-  NotificationDto consume(NotificationDto notificationDto);
+  //NotificationDto consumer(NotificationDto notificationDto);
+  //NotificationDto consumer(String x);
 
 }
