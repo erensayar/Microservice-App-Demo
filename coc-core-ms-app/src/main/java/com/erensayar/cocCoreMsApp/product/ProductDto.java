@@ -1,5 +1,6 @@
 package com.erensayar.cocCoreMsApp.product;
 
+import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -11,7 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ProductDto {
+public class ProductDto implements Serializable {
   private Long id;
   private String name;
   private String description;

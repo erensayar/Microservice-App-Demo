@@ -1,23 +1,27 @@
 package com.erensayar.miscampaignservice.service.implementation;
 
 import com.erensayar.cocCoreMsApp.notification.NotificationDto;
+import com.erensayar.miscampaignservice.config.rabbitMq.RabbitMqConstant;
 import com.erensayar.miscampaignservice.service.CampaignNotificationService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.cloud.stream.annotation.EnableBinding;
-import org.springframework.cloud.stream.messaging.Source;
-import org.springframework.messaging.support.MessageBuilder;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
-@EnableBinding(Source.class)
 @RequiredArgsConstructor
 public class CampaignNotificationServiceImpl implements CampaignNotificationService {
 
-  private final Source source;
+  private final RabbitTemplate rabbitTemplate;
+  private final RabbitMqConstant rabbitMqConstant;
 
-  @Override
   public void pushCampaignNotification(NotificationDto notificationDto) {
-    source.output().send(MessageBuilder.withPayload(notificationDto).build());
+    log.info(notificationDto.toString());
+    rabbitTemplate.convertAndSend(
+        rabbitMqConstant.getExchange().getTopic(),
+        rabbitMqConstant.getRoutingKey().getNotification(),
+        notificationDto);
   }
 
 }

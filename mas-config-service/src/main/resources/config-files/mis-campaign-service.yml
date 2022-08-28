@@ -21,11 +21,11 @@ spring:
       client:
         url: ${ADMIN_SERVICE_PORT:http://localhost:7002}
 
-  cloud:
-    stream:
-      bindings:
-        output:
-          destination: ms.api.campaign-query
+  #cloud:
+  #  stream:
+  #    bindings:
+  #      output:
+  #        destination: ms.api.campaign-query
   rabbitmq:
     username: ${RABBIT_MQ_USERNAME:admin}
     password: ${RABBIT_MQ_PASSWORD:admin}
@@ -44,3 +44,15 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: ${EUREKA_SERVICE_URL:http://localhost:7001}/eureka
+
+api:
+  rabbit-mq:
+    exchange:
+      direct: ms.api.direct
+      topic: ms.api.topic
+    queue:
+      campaign: ms.api.campaign-query
+      notification: ms.api.notification-query
+    routing-key:
+      campaign: ms.api.campaign-routing-key
+      notification: ms.api.notification-routing-key

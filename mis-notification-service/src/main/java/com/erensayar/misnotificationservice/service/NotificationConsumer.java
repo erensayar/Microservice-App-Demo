@@ -16,11 +16,9 @@ public class NotificationConsumer {
   private final RabbitTemplate rabbitTemplate;
   private final RabbitMqConstant rabbitMqConstant;
 
-  //@RabbitListener(queues = {"${api.rabbit-mq.queue.campaign}"})
-  @RabbitListener(queues = "ms.api.campaign-query")
-  public NotificationDto consumer(String x) {
-    System.out.println(x);
-    //log.info("Campaigns Received : " + notificationDto.toString());
+  @RabbitListener(queues = {"${api.rabbit-mq.queue.campaign}"})
+  public NotificationDto consumer(NotificationDto notificationDto) {
+    log.info("Campaigns Received : " + notificationDto.toString());
     return null;
     // TODO : Implementation
   }
