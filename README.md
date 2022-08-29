@@ -34,27 +34,38 @@ It is not the final state.
 
 ---
 
-# Microservice Utility Modules SS
+# Dockerizing Modules
 
-<b>Eureka</b>
+    mvn docker:build
 
-![Eureka](dev-docs/ss-eureka.png)
+#### When you run this command
 
-<b>Admin Server</b>
+    docker image ls
 
-![AdminServer](dev-docs/ss-admin-server-1.png)
-![AdminServer](dev-docs/ss-admin-server-2.png)
-![AdminServer](dev-docs/ss-admin-server-3.png)
+#### It should look like this
 
-<b>Zipkin</b>
+| REPOSITORY                      | TAG          | SIZE    |
+|---------------------------------|--------------|---------|
+| ms-app/mis-user-service         | 1.0.0        | 256MB   |
+| ms-app/mis-user-service         | latest       | 256MB   |
+| ms-app/mis-product-service      | 1.0.0        | 256MB   |
+| ms-app/mis-product-service      | latest       | 256MB   |
+| ms-app/mis-notification-service | 1.0.0        | 258MB   |
+| ms-app/mis-notification-service | latest       | 258MB   |
+| ms-app/mis-campaign-service     | 1.0.0        | 258MB   |
+| ms-app/mis-campaign-service     | latest       | 258MB   |
+| ms-app/mas-hystrix-service      | 1.0.0        | 219MB   |
+| ms-app/mas-hystrix-service      | latest       | 219MB   |
+| ms-app/mas-eureka-service       | 1.0.0        | 219MB   |
+| ms-app/mas-eureka-service       | latest       | 219MB   |
+| ms-app/mas-admin-service        | 1.0.0        | 224MB   |
+| ms-app/mas-admin-service        | latest       | 224MB   |
+| ms-app/mas-config-service       | 1.0.0        | 220MB   |
+| ms-app/mas-config-service       | latest       | 220MB   |
 
-![Zipkin](dev-docs/ss-zipkin-1.png)
-![Zipkin](dev-docs/ss-zipkin-2.png)
-![Zipkin](dev-docs/ss-zipkin-3.png)
 
-<b>RabbitMqManager</b>
+---
 
-![RabbitMqManager](dev-docs/ss-rabbitmq-1.png)
 
 # Done
 
@@ -112,6 +123,26 @@ It is not the final state.
 | 5   | Product-5-Description  | Product-5  |
 
 
-			
-			
-			
+---
+
+# Microservice Utility Modules SS
+
+<b>Eureka</b>
+
+![Eureka](dev-docs/ss-eureka.png)
+
+<b>Admin Server</b>
+
+![AdminServer](dev-docs/ss-admin-server-1.png)
+![AdminServer](dev-docs/ss-admin-server-2.png)
+![AdminServer](dev-docs/ss-admin-server-3.png)
+
+<b>Zipkin</b>
+
+![Zipkin](dev-docs/ss-zipkin-1.png)
+![Zipkin](dev-docs/ss-zipkin-2.png)
+![Zipkin](dev-docs/ss-zipkin-3.png)
+
+<b>RabbitMqManager</b>
+
+![RabbitMqManager](dev-docs/ss-rabbitmq-1.png)

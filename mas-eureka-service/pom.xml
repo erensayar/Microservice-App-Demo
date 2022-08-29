@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
@@ -52,9 +53,13 @@
           <verbose>true</verbose>
           <images>
             <image>
-              <name>ms-app/${project.artifactId}:${project.version}</name>
+              <name>${project.artifactId}:${project.version}</name>
               <build>
                 <from>${fabric8.docker.maven.plugin.java.version}</from>
+                <tags>
+                  <tag>latest</tag>
+                  <tag>${project.version}</tag>
+                </tags>
                 <entryPoint>
                   <exec>
                     <args>java</args>
@@ -63,9 +68,17 @@
                   </exec>
                 </entryPoint>
                 <assembly>
+                  <mode>dir</mode>
                   <descriptorRef>artifact</descriptorRef>
                 </assembly>
               </build>
+              <!--
+              <run>
+                <ports>
+                  <port>7000:7000</port>
+                </ports>
+              </run>
+              -->
             </image>
           </images>
         </configuration>

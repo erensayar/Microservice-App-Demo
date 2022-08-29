@@ -58,9 +58,13 @@
           <verbose>true</verbose>
           <images>
             <image>
-              <name>ms-app/${project.artifactId}:${project.version}</name>
+              <name>${project.artifactId}:${project.version}</name>
               <build>
                 <from>${fabric8.docker.maven.plugin.java.version}</from>
+                <tags>
+                  <tag>latest</tag>
+                  <tag>${project.version}</tag>
+                </tags>
                 <entryPoint>
                   <exec>
                     <args>java</args>
@@ -69,9 +73,17 @@
                   </exec>
                 </entryPoint>
                 <assembly>
+                  <mode>dir</mode>
                   <descriptorRef>artifact</descriptorRef>
                 </assembly>
               </build>
+              <!--
+              <run>
+                <ports>
+                  <port>7000:7000</port>
+                </ports>
+              </run>
+              -->
             </image>
           </images>
         </configuration>
