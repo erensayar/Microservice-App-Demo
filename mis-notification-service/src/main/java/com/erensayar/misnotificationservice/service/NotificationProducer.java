@@ -1,6 +1,6 @@
 package com.erensayar.misnotificationservice.service;
 
-import com.erensayar.cocCoreMsApp.notification.NotificationDto;
+import com.erensayar.coccoremsapp.notification.NotificationDto;
 import com.erensayar.misnotificationservice.config.rabbitMq.RabbitMqConstant;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

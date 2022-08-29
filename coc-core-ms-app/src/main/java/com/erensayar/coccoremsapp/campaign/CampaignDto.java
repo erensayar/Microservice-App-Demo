@@ -1,4 +1,4 @@
-package com.erensayar.cocCoreMsApp.campaign;
+package com.erensayar.coccoremsapp.campaign;
 
 import java.io.Serializable;
 import java.time.LocalDate;

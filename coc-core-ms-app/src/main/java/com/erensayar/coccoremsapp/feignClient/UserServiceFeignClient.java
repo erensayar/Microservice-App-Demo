@@ -1,4 +1,4 @@
-package com.erensayar.cocCoreMsApp.feignClient;
+package com.erensayar.coccoremsapp.feignClient;
 
 import org.springframework.cloud.openfeign.FeignClient;
 

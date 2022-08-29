@@ -1,7 +1,7 @@
 package com.erensayar.misnotificationservice.controller;
 
-import com.erensayar.cocCoreMsApp.feignClient.NotificationServiceBase;
-import com.erensayar.cocCoreMsApp.notification.NotificationDto;
+import com.erensayar.coccoremsapp.feignClient.NotificationServiceBase;
+import com.erensayar.coccoremsapp.notification.NotificationDto;
 import com.erensayar.misnotificationservice.service.NotificationProducer;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,6 @@
-package com.erensayar.cocCoreMsApp.feignClient;
+package com.erensayar.coccoremsapp.feignClient;
 
-import com.erensayar.cocCoreMsApp.product.ProductDto;
+import com.erensayar.coccoremsapp.product.ProductDto;
 import java.util.List;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,6 @@
 package com.erensayar.misuserservice.service.implementation;
 
-import com.erensayar.cocCoreMsApp.user.UserDto;
+import com.erensayar.coccoremsapp.user.UserDto;
 import com.erensayar.core.error.exception.BadRequestException;
 import com.erensayar.core.error.exception.NoContentException;
 import com.erensayar.misuserservice.entity.User;

@@ -1,6 +1,6 @@
 package com.erensayar.miscampaignservice.service;
 
-import com.erensayar.cocCoreMsApp.notification.NotificationDto;
+import com.erensayar.coccoremsapp.notification.NotificationDto;
 
 public interface CampaignNotificationService {
 

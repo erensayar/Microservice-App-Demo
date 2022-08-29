@@ -1,6 +1,6 @@
 package com.erensayar.miscampaignservice.service.implementation;
 
-import com.erensayar.cocCoreMsApp.notification.NotificationDto;
+import com.erensayar.coccoremsapp.notification.NotificationDto;
 import com.erensayar.miscampaignservice.config.rabbitMq.RabbitMqConstant;
 import com.erensayar.miscampaignservice.service.CampaignNotificationService;
 import lombok.RequiredArgsConstructor;

@@ -1,8 +1,8 @@
 package com.erensayar.miscampaignservice;
 
-import com.erensayar.cocCoreMsApp.feignClient.NotificationServiceFeignClient;
-import com.erensayar.cocCoreMsApp.feignClient.ProductServiceFeignClient;
-import com.erensayar.cocCoreMsApp.feignClient.UserServiceFeignClient;
+import com.erensayar.coccoremsapp.feignClient.NotificationServiceFeignClient;
+import com.erensayar.coccoremsapp.feignClient.ProductServiceFeignClient;
+import com.erensayar.coccoremsapp.feignClient.UserServiceFeignClient;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.config.Configuration.AccessLevel;
 import org.springframework.boot.SpringApplication;

@@ -1,7 +1,7 @@
-package com.erensayar.cocCoreMsApp.notification;
+package com.erensayar.coccoremsapp.notification;
 
-import com.erensayar.cocCoreMsApp.campaign.CampaignDto;
-import com.erensayar.cocCoreMsApp.user.UserDto;
+import com.erensayar.coccoremsapp.campaign.CampaignDto;
+import com.erensayar.coccoremsapp.user.UserDto;
 import java.io.Serializable;
 import java.util.List;
 import lombok.AllArgsConstructor;

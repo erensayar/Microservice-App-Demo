@@ -1,4 +1,4 @@
-package com.erensayar.cocCoreMsApp.configuration;
+package com.erensayar.coccoremsapp.configuration;
 
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Configuration;

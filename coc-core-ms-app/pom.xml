@@ -58,7 +58,7 @@
               <goal>repackage</goal>
             </goals>
             <configuration>
-              <mainClass>com.erensayar.cocCoreMsApp.CocCoreMsAppApplication</mainClass>
+              <mainClass>com.erensayar.coccoremsapp.CocCoreMsAppApplication</mainClass>
             </configuration>
           </execution>
         </executions>

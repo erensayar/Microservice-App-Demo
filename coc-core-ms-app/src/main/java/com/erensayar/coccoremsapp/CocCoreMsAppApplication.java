@@ -1,4 +1,4 @@
-package com.erensayar.cocCoreMsApp;
+package com.erensayar.coccoremsapp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

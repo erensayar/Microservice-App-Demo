@@ -1,6 +1,6 @@
-package com.erensayar.cocCoreMsApp.feignClient;
+package com.erensayar.coccoremsapp.feignClient;
 
-import com.erensayar.cocCoreMsApp.notification.NotificationDto;
+import com.erensayar.coccoremsapp.notification.NotificationDto;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

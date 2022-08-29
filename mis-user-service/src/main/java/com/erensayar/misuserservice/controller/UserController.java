@@ -1,7 +1,7 @@
 package com.erensayar.misuserservice.controller;
 
-import com.erensayar.cocCoreMsApp.feignClient.UserServiceBase;
-import com.erensayar.cocCoreMsApp.user.UserDto;
+import com.erensayar.coccoremsapp.feignClient.UserServiceBase;
+import com.erensayar.coccoremsapp.user.UserDto;
 import com.erensayar.misuserservice.service.UserService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;

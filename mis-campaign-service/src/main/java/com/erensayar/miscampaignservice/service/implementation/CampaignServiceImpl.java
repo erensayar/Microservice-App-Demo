@@ -1,9 +1,9 @@
 package com.erensayar.miscampaignservice.service.implementation;
 
-import com.erensayar.cocCoreMsApp.campaign.CampaignDto;
-import com.erensayar.cocCoreMsApp.feignClient.UserServiceFeignClient;
-import com.erensayar.cocCoreMsApp.notification.NotificationDto;
-import com.erensayar.cocCoreMsApp.user.UserDto;
+import com.erensayar.coccoremsapp.campaign.CampaignDto;
+import com.erensayar.coccoremsapp.feignClient.UserServiceFeignClient;
+import com.erensayar.coccoremsapp.notification.NotificationDto;
+import com.erensayar.coccoremsapp.user.UserDto;
 import com.erensayar.core.error.exception.BadRequestException;
 import com.erensayar.core.error.exception.NoContentException;
 import com.erensayar.miscampaignservice.entity.Campaign;

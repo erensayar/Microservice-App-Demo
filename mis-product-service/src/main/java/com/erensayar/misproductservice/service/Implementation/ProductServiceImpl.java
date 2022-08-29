@@ -1,13 +1,11 @@
 package com.erensayar.misproductservice.service.Implementation;
 
-import com.erensayar.cocCoreMsApp.product.ProductDto;
-import com.erensayar.cocCoreMsApp.user.UserDto;
+import com.erensayar.coccoremsapp.product.ProductDto;
 import com.erensayar.core.error.exception.BadRequestException;
 import com.erensayar.core.error.exception.NoContentException;
 import com.erensayar.misproductservice.entity.Product;
 import com.erensayar.misproductservice.repository.ProductRepository;
 import com.erensayar.misproductservice.service.ProductService;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import lombok.RequiredArgsConstructor;

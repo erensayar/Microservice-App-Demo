@@ -1,6 +1,6 @@
 package com.erensayar.misuserservice.service;
 
-import com.erensayar.cocCoreMsApp.user.UserDto;
+import com.erensayar.coccoremsapp.user.UserDto;
 import java.util.List;
 
 public interface UserService {
