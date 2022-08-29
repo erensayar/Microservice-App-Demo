@@ -84,21 +84,21 @@ In project root directory:
 * Load Balancing
 * Feign Communication
 * Query Communication
-* Business (MIS) for test
-* Dockerized Modules
+* Business for test (MIS)
+* Dockerizing Modules
 
 # TO-DO
 
-* Gateway implementation
+* Gateway implementation (Zuul GW Implementation)
 * Config server encryption-decryption
 * Hot config update (refreshcope etc..)
 * Load Balancing (improvement)
-* Duplicated usage fix for query
 * Admin server duplicate instance?
-* Mail notification structure implementation
+* Notification service query consumer broken
+* Auth server
+* Mail notification implementation
 * Phone notification implementation
 * Phone notification simulation
-* Auth server
 
 # DB URL
 
