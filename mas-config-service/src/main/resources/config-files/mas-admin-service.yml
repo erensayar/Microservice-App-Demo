@@ -1,0 +1,28 @@
+server:
+  port: ${ADMIN_SERVICE_PORT:7002}
+
+spring:
+  application:
+    name: mas-admin-service
+eureka:
+  instance:
+    hostname: ${EUREKA_SERVICE_HOST:localhost}
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
+    metadata-map:
+      startup: ${random.int}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:7001}/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS

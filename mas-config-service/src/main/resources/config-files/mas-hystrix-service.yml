@@ -1,0 +1,30 @@
+server:
+  port: ${HYSTRIX_SERVICE_PORT:7003}
+
+spring:
+  application:
+    name: mas-hystrix-service
+  boot:
+    admin:
+      client:
+        url: ${ADMIN_SERVICE_URL:http://localhost:7002}
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
+    metadata-map:
+      startup: ${random.int}    #needed to trigger info and endpoint update after restart
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:7001}/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS

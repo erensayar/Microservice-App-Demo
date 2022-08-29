@@ -1,0 +1,55 @@
+server:
+  port: ${CAMPAIGN_SERVICE_PORT:8001}
+
+
+spring:
+  application:
+    name: mis-campaign-service
+  datasource:
+    username: sa
+    url: jdbc:h2:mem:campaign-db
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+
+  boot:
+    admin:
+      client:
+        url: ${ADMIN_SERVICE_URL:http://localhost:7002}
+
+  #cloud:
+  #  stream:
+  #    bindings:
+  #      output:
+  #        destination: ms.api.campaign-query
+  rabbitmq:
+    username: ${RABBIT_MQ_USERNAME:admin}
+    password: ${RABBIT_MQ_PASSWORD:admin}
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:7001}/eureka
+
+api:
+  rabbit-mq:
+    exchange:
+      direct: ms.api.direct
+    queue:
+      campaign: ms.api.campaign-query
+    routing-key:
+      campaign: ms.api.campaign-routing-key

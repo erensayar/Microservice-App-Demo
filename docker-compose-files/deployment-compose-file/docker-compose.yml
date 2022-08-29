@@ -1,0 +1,111 @@
+version: '3'
+
+services:
+
+  zipkin:
+    container_name: zipkin
+    image: 'openzipkin/zipkin'
+    ports:
+      - '9411:9411'
+
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3-management-alpine
+    #image: 'rabbitmq:3.8-management-alpine'
+    environment:
+      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_PASS=admin
+    #volumes:
+    #  - /opt/docker-volume/rabbitmq/lib:/var/lib/rabbitmq/
+    #  - /opt/docker-volume/rabbitmq/log:/var/log/rabbitmq/
+    ports:
+      - '5672:5672'     # rabbitmq
+      - '15672:15672'   # rabbitmq management interface
+
+  config-service:
+    container_name: mas-config-service
+    image: 'ms-app-mas-config-service'
+    environment:
+      - CONFIG_SERVICE_PORT=${MAS_CONFIG_SERVICE_PORT}
+      - EUREKA_SERVICE_URL=mas-eureka-service:${MAS_EUREKA_SERVICE_PORT}
+      - ADMIN_SERVICE_URL=mas-admin-service:${MAS_ADMIN_SERVICE_PORT}
+    ports:
+      - ${MAS_CONFIG_SERVICE_HOST_PORT}:${MAS_CONFIG_SERVICE_PORT}
+
+  eureka-service:
+    container_name: mas-eureka-service
+    image: 'ms-app-mas-eureka-service'
+    environment:
+      - EUREKA_SERVICE_PORT=${MAS_EUREKA_SERVICE_PORT}
+      - EUREKA_SERVICE_URL=mas-eureka-service:${MAS_EUREKA_SERVICE_PORT}
+      - EUREKA_SERVICE_HOST=mas-eureka-service
+      - CONFIG_SERVICE_URL=mas-config-service:${MAS_CONFIG_SERVICE_PORT}
+      - ADMIN_SERVICE_URL=mas-admin-service:${MAS_ADMIN_SERVICE_PORT}
+    ports:
+      - ${MAS_EUREKA_SERVICE_HOST_PORT}:${MAS_EUREKA_SERVICE_PORT}
+
+  admin-service:
+    container_name: mas-admin-service
+    image: 'ms-app-mas-admin-service'
+    environment:
+      - ADMIN_SERVICE_PORT=MAS_ADMIN_SERVICE_PORT
+      - CONFIG_SERVICE_URL=mas-config-service:${MAS_CONFIG_SERVICE_PORT}
+      - EUREKA_SERVICE_HOST=mas-eureka-service
+      - EUREKA_SERVICE_URL=mas-eureka-service:${MAS_EUREKA_SERVICE_PORT}
+    ports:
+      - ${MAS_ADMIN_SERVICE_HOST_PORT}:${MAS_ADMIN_SERVICE_PORT}
+
+  hystrix-service:
+    container_name: mas-hystrix-service
+    image: 'ms-app-mas-hystrix-service'
+    environment:
+      - HYSTRIX_SERVICE_PORT=${MAS_HYSTRIX_SERVICE_PORT}
+      - CONFIG_SERVICE_URL=mas-config-service:${MAS_CONFIG_SERVICE_PORT}
+      - ADMIN_SERVICE_URL=mas-admin-service:${MAS_ADMIN_SERVICE_PORT}
+      - EUREKA_SERVICE_URL=mas-eureka-service:${MAS_EUREKA_SERVICE_PORT}
+    ports:
+      - ${MAS_HYSTRIX_SERVICE_HOST_PORT}:${MAS_HYSTRIX_SERVICE_PORT}
+
+  user-service:
+    container_name: mis-user-service
+    image: 'ms-app-mis-user-service'
+    environment:
+      - USER_SERVICE_PORT=${MIS_USER_SERVICE_PORT}
+      - CONFIG_SERVICE_URL=mas-config-service:${MAS_CONFIG_SERVICE_PORT}
+      - ADMIN_SERVICE_URL=mas-admin-service:${MAS_ADMIN_SERVICE_PORT}
+      - EUREKA_SERVICE_URL=mas-eureka-service:${MAS_EUREKA_SERVICE_PORT}
+    ports:
+      - ${MIS_USER_SERVICE_HOST_PORT}:${MIS_USER_SERVICE_PORT}
+
+  campaign-service:
+    container_name: mis-campaign-service
+    image: 'ms-app-mis-campaign-service'
+    environment:
+      - CAMPAIGN_SERVICE_PORT=${MIS_CAMPAIGN_SERVICE_PORT}
+      - CONFIG_SERVICE_URL=mas-config-service:${MAS_CONFIG_SERVICE_PORT}
+      - ADMIN_SERVICE_URL=mas-admin-service:${MAS_ADMIN_SERVICE_PORT}
+      - EUREKA_SERVICE_URL=mas-eureka-service:${MAS_EUREKA_SERVICE_PORT}
+    ports:
+      - ${MIS_CAMPAIGN_SERVICE_HOST_PORT}:${MIS_CAMPAIGN_SERVICE_PORT}
+
+  notification-service:
+    container_name: mis-notification-service
+    image: 'ms-app-mis-notification-service'
+    environment:
+      - NOTIFICATION_SERVICE_PORT=${MIS_NOTIFICATION_SERVICE_PORT}
+      - CONFIG_SERVICE_URL=mas-config-service:${MAS_CONFIG_SERVICE_PORT}
+      - ADMIN_SERVICE_URL=mas-admin-service:${MAS_ADMIN_SERVICE_PORT}
+      - EUREKA_SERVICE_URL=mas-eureka-service:${MAS_EUREKA_SERVICE_PORT}
+    ports:
+      - ${MIS_NOTIFICATION_SERVICE_HOST_PORT}:${MIS_NOTIFICATION_SERVICE_PORT}
+
+  product-service:
+    container_name: mis-product-service
+    image: 'ms-app-mis-product-service'
+    environment:
+      - PRODUCT_SERVICE_PORT=${MIS_PRODUCT_SERVICE_PORT}
+      - CONFIG_SERVICE_URL=mas-config-service:${MAS_CONFIG_SERVICE_PORT}
+      - ADMIN_SERVICE_URL=mas-admin-service:${MAS_ADMIN_SERVICE_PORT}
+      - EUREKA_SERVICE_URL=mas-eureka-service:${MAS_EUREKA_SERVICE_PORT}
+    ports:
+      - ${MIS_PRODUCT_SERVICE_HOST_PORT}:${MIS_PRODUCT_SERVICE_PORT}

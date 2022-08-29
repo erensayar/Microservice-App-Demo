@@ -1,0 +1,27 @@
+server:
+  port: ${EUREKA_SERVICE_PORT:7001}
+
+spring:
+  application:
+    name: mas-eureka-service
+  boot:
+    admin:
+      client:
+        url: ${ADMIN_SERVICE_URL:http://localhost:7002}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+eureka:
+  server:
+    eviction-interval-timer-in-ms: 1000
+  instance:
+    hostname: ${EUREKA_SERVICE_HOST:localhost}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:7001}/eureka

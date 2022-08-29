@@ -1,0 +1,89 @@
+### My gitignore File Archive ###
+
+### Maven ###
+target/
+# !.mvn/wrapper/maven-wrapper.jar
+# .mvn
+!**/src/main/**/target/
+!**/src/test/**/target/
+mvnw*
+.mvn/*
+
+### VS Code ###
+.vscode/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+nb-configuration.xml
+nbactions.xml
+
+### Eclipse & STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### JS ###
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+**/node_modules
+/.pnp
+.pnp.js
+/coverage
+/build
+
+### Elastic Beanstalk Files ###
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+
+### MacOS generated files ###
+.directory
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+### JPA Buddy ###
+.jpb/
+
+### Log file ###
+logs/
+*.log
+
+### MISC ###
+HELP.md
+Archive/
+/logs/
+!/database-data/
+/database-data/
+database-data/
+/scripts/node_modules/
+/target/
+storage/
+/Documents/.~lock.ToDo-List.ods#
+zipkin.jar

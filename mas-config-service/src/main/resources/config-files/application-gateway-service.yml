@@ -1,0 +1,23 @@
+server:
+  port: ${APPLICATION_GATEWAY_PORT:80}
+
+spring:
+  application:
+    name: application-gateway-service
+
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:7001}/eureka
+    register-with-eureka: false
+  instance:
+    preferIpAddress: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
