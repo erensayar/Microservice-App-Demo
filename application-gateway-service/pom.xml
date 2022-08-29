@@ -46,6 +46,43 @@
           </execution>
         </executions>
       </plugin>
+
+      <plugin>
+        <groupId>io.fabric8</groupId>
+        <artifactId>docker-maven-plugin</artifactId>
+        <version>${fabric8.docker.maven.plugin.version}</version>
+        <extensions>true</extensions>
+        <configuration>
+          <verbose>true</verbose>
+          <images>
+            <image>
+              <name>ms-app/${project.artifactId}:${project.version}</name>
+              <build>
+                <from>${fabric8.docker.maven.plugin.java.version}</from>
+                <entryPoint>
+                  <exec>
+                    <args>java</args>
+                    <args>-jar</args>
+                    <args>/maven/${project.artifactId}-${project.version}.jar</args>
+                  </exec>
+                </entryPoint>
+                <assembly>
+                  <descriptorRef>artifact</descriptorRef>
+                </assembly>
+              </build>
+            </image>
+          </images>
+        </configuration>
+        <executions>
+          <execution>
+            <id>build</id>
+            <phase>post-integration-test</phase>
+            <goals>
+              <goal>build</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
 

@@ -67,6 +67,7 @@ It is not the final state.
 # TO-DO
 
 * Gateway implementation
+* Dockerized Modules
 * Config server encryption-decryption
 * Hot config update (refreshcope etc..)
 * Load Balancing (improvement)
