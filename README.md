@@ -36,6 +36,8 @@ It is not the final state.
 
 # Dockerizing Modules
 
+In project root directory:
+
     mvn docker:build
 
 #### When you run this command

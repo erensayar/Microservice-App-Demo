@@ -49,7 +49,7 @@
           <verbose>true</verbose>
           <images>
             <image>
-              <name>${project.artifactId}:${project.version}</name>
+              <name>ms-app-${project.artifactId}:${project.version}</name>
               <build>
                 <from>${fabric8.docker.maven.plugin.java.version}</from>
                 <tags>
