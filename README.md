@@ -96,7 +96,6 @@ In project root directory:
 # Done
 
 * MS Structure (MAS)
-* Load Balancing
 * Feign Communication
 * Query Communication
 * Business (MIS)
@@ -104,13 +103,14 @@ In project root directory:
 
 # TO-DO
 
-* Gateway improvement
+* <b> Gateway improvement with spring cloud gateway </b>
+* <b> Load Balance improvement with spring cloud load balancer</b>
 * Config server encryption-decryption
 * Hot config update (refreshcope etc..)
-* Load Balancing with spring cloud load balancer
 * Admin server duplicate instance?
 * Auth server
 
+---
 
 * Mail notification implementation
 * Phone notification implementation
