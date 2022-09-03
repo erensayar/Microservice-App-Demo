@@ -1,3 +1,10 @@
+# Development Continues
+
+* It is not the final state
+* Almost done
+
+---
+
 ## What this repository for?
 This project microservice architecture implementation trying on spring cloud ecosystem.
 
