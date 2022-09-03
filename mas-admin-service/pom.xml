@@ -6,9 +6,9 @@
 
   <parent>
     <groupId>com.erensayar</groupId>
-    <artifactId>coc-cloud-main-parent</artifactId>
+    <artifactId>coc-cloud-top-parent</artifactId>
     <version>1.0.0</version>
-    <relativePath>../coc-cloud-main-parent/pom.xml</relativePath>
+    <relativePath/>
   </parent>
 
   <artifactId>mas-admin-service</artifactId>

@@ -1,6 +1,14 @@
-## Development Continues...
+## What this repository for?
+This project microservice architecture implementation trying on spring cloud ecosystem.
 
-It is not the final state.
+### Used Spring Cloud Modules
+* Config Server
+* Eureka Server
+* Zuul Api Gateway
+* Ribbon
+* Admin Panel
+* Hystrix
+* Zipkin
 
 ---
 
@@ -12,12 +20,12 @@ It is not the final state.
 * <b> Zipkin Server </b>    : Available in docker-compose file. Just start the server to trace (Default Port: 9411)
 * <b> Build Dependencies In Order Of Writing </b>  
 
-  | Dependency Or Parent           | Description                                                  | Repository                                     |         
-  |--------------------------------|--------------------------------------------------------------|------------------------------------------------|
-  | <b> coc-cloud-main-parent </b> | Pom should be exist in .m2 local folder. (mvn clean install) | https://github.com/erensayar/common-components |
-  | <b> coc-cloud-parent </b>      | Pom should be exist in .m2 local folder. (mvn clean install) | https://github.com/erensayar/common-components |
-  | <b> coc-core-ms-app </b>       | Jar should be exist in .m2 local folder. (mvn clean install) | In this Repo                                   |
-  | <b> coc-core </b>              | Jar should be exist in .m2 local folder. (mvn clean install) | https://github.com/erensayar/common-components |
+  | Dependency Or Parent          | Description                                                  | Repository                                                   |         
+  |-------------------------------|--------------------------------------------------------------|--------------------------------------------------------------|
+  | <b> coc-cloud-top-parent </b> | Pom should be exist in .m2 local folder. (mvn clean install) | https://github.com/erensayar/common-components               |
+  | <b> coc-cloud-parent </b>     | Pom should be exist in .m2 local folder. (mvn clean install) | https://github.com/erensayar/common-components               |
+  | <b> coc-core-ms-app </b>      | Jar should be exist in .m2 local folder. (mvn clean install) | In this Repo                                                 |
+  | <b> coc-core </b>             | Jar should be exist in .m2 local folder. (mvn clean install) | https://github.com/erensayar/common-components               |
 
 
 
@@ -154,3 +162,21 @@ images/
 <b>RabbitMqManager</b>
 
 ![RabbitMqManager](dev-docs/images/ss-rabbitmq-1.png)
+
+
+
+---
+
+### Tags
+* spring cloud microservice example
+* microservice example
+* zuul example
+* zuul api gateway example
+* ribbon example
+* ribbon load balancer example
+* load balance example
+* eureka+ribbon+zuul+hystrix
+* config server example
+* eureka server example
+* admin server example
+* zipkin example
