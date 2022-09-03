@@ -19,8 +19,8 @@ public class CampaignNotificationServiceImpl implements CampaignNotificationServ
   public void pushCampaignNotification(NotificationDto notificationDto) {
     log.info(notificationDto.toString());
     rabbitTemplate.convertAndSend(
-        rabbitMqConstant.getExchange().getTopic(),
-        rabbitMqConstant.getRoutingKey().getNotification(),
+        rabbitMqConstant.getExchange().getDirect(),
+        rabbitMqConstant.getRoutingKey().getCampaign(),
         notificationDto);
   }
 

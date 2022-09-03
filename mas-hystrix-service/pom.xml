@@ -13,7 +13,7 @@
   <artifactId>mas-hystrix-service</artifactId>
   <version>1.0.0</version>
   <name>mas-hystrix-service</name>
-  <description>mas-hystrix-service</description>
+  <description>mas-hystrix-dashboard-service</description>
 
   <dependencies>
     <dependency>

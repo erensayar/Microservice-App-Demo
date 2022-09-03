@@ -66,6 +66,16 @@ services:
     ports:
       - ${MAS_HYSTRIX_SERVICE_HOST_PORT}:${MAS_HYSTRIX_SERVICE_PORT}
 
+  api-gw-service:
+    container_name: api-gateway-service
+    image: 'ms-app-api-gateway-service'
+    environment:
+      - API_GATEWAY_PORT=${API_GATEWAY_PORT}
+      - CONFIG_SERVICE_URL=mas-config-service:${MAS_CONFIG_SERVICE_PORT}
+      - EUREKA_SERVICE_URL=mas-eureka-service:${MAS_EUREKA_SERVICE_PORT}
+    ports:
+      - ${API_GW_SERVICE_HOST_PORT}:${API_GW_SERVICE_PORT}
+
   user-service:
     container_name: mis-user-service
     image: 'ms-app-mis-user-service'

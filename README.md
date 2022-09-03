@@ -11,10 +11,10 @@ This project microservice architecture implementation trying on spring cloud eco
 ### Used Spring Cloud Modules
 * Config Server
 * Eureka Server
-* Zuul Api Gateway
-* Ribbon
-* Admin Panel
+* Spring Cloud Gateway
+* Spring Cloud Load Balancer
 * Hystrix
+* Admin Panel
 * Zipkin
 
 ---
@@ -42,7 +42,7 @@ This project microservice architecture implementation trying on spring cloud eco
 
 # Working Principle
 
-![WorkingPrinciple](dev-docs/images/ss-purpose.png)
+![WorkingPrinciple](dev-docs/images/ss-purpose-and-query-structure.png)
 
 # Logic
 
@@ -99,18 +99,19 @@ In project root directory:
 * Load Balancing
 * Feign Communication
 * Query Communication
-* Business for test (MIS)
+* Business (MIS)
 * Dockerizing Modules
 
 # TO-DO
 
-* Gateway implementation (Zuul GW Implementation)
+* Gateway improvement
 * Config server encryption-decryption
 * Hot config update (refreshcope etc..)
-* Load Balancing (improvement)
+* Load Balancing with spring cloud load balancer
 * Admin server duplicate instance?
-* Notification service query consumer broken
 * Auth server
+
+
 * Mail notification implementation
 * Phone notification implementation
 * Phone notification simulation
@@ -177,12 +178,10 @@ images/
 ### Tags
 * spring cloud microservice example
 * microservice example
-* zuul example
-* zuul api gateway example
-* ribbon example
-* ribbon load balancer example
+* api gateway example
+* spring cloud gateway example
 * load balance example
-* eureka+ribbon+zuul+hystrix
+* spring cloud load balancer example
 * config server example
 * eureka server example
 * admin server example

@@ -1,0 +1,117 @@
+server:
+  port: ${API_GATEWAY_PORT:8080}
+
+spring:
+  application:
+    name: api-gateway-service
+  main:
+    web-application-type: reactive
+
+  cloud:
+    gateway:
+      routes:
+        - id: mis-user-service
+          uri: lb://mis-user-service
+          predicates:
+            - Path=/users/**
+          #filters:
+          #  - RewritePath=/(?<segment>.*), /$\{segment}
+          #  - name: Hystrix
+          #    args:
+          #      name: mis-user-service
+          #      fallbackUri: forward:/exc/users
+
+        - id: mis-campaign-service
+          uri: lb://mis-campaign-service
+          predicates:
+            - Path=/campaigns/**
+          #filters:
+          #  - RewritePath=/(?<segment>.*), /$\{segment}
+          #  - name: Hystrix
+          #    args:
+          #      name: mis-campaign-service
+          #      fallbackUri: forward:/exc/campaigns
+
+        - id: mis-notification-service
+          uri: lb://mis-notification-service
+          predicates:
+            - Path=/notifications/**
+          #filters:
+          #  - RewritePath=/(?<segment>.*), /$\{segment}
+          #  - name: Hystrix
+          #    args:
+          #      name: mis-notification-service
+          #      fallbackUri: forward:/exc/notifications
+
+        - id: mis-product-service
+          uri: lb://mis-product-service
+          predicates:
+            - Path=/products/**
+          #filters:
+          #  - RewritePath=/(?<segment>.*), /$\{segment}
+          #  - name: Hystrix
+          #    args:
+          #      name: mis-product-service
+          #      fallbackUri: forward:/exc/products
+
+#eureka:
+#  client:
+#    register-with-eureka: true
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:7001}/eureka
+
+eureka:
+  client:
+    register-with-eureka: false
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:7001}/eureka
+  instance:
+    preferIpAddress: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+
+
+
+
+#zuul:
+#  prefix: /api/v1
+#  routes:
+#    ignoredServices: '*'
+#    mis-user-service:
+#      path: /users/**
+#      serviceId: MIS-USER-SERVICE
+#    mis-campaign-service:
+#      path: /campaigns/**
+#      serviceId: MIS-CAMPAIGN-SERVICE
+#    mis-notification-service:
+#      path: /notifications/**
+#      serviceId: MIS-NOTIFICATION-SERVICE
+#    mis-product-service:
+#      path: /products/**
+#      serviceId: MIS-PRODUCT-SERVICE
+#
+#ribbon:
+#  eureka:
+#    enabled: false
+#  MaxAutoRetries: 1
+#  MaxAutoRetriesNextServer: 2
+#  OkToRetryOnAllOperations: true
+#
+#hystrix:
+#  command:
+#    default:
+#      circuitBreaker:
+#        enabled: true
+#      execution:
+#        isolation:
+#          thread:
+#            timeoutInMilliseconds: 60000
+#        timeout:
+#          enabled: false
