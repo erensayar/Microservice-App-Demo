@@ -1,6 +1,7 @@
 package com.erensayar.miscampaignservice.service;
 
-import com.erensayar.coccoremsapp.campaign.CampaignDto;
+import com.erensayar.mscore.campaign.CampaignDto;
+
 import java.util.List;
 
 public interface CampaignService {

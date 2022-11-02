@@ -1,5 +1,7 @@
 package com.erensayar.miscampaignservice.config.rabbitMq;
 
+/*
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -32,3 +34,5 @@ public class RabbitMqConfiguration {
 
 
 }
+
+ */

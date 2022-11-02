@@ -1,14 +1,14 @@
 package com.erensayar.miscampaignservice.service.implementation;
 
-import com.erensayar.coccoremsapp.campaign.CampaignDto;
-import com.erensayar.coccoremsapp.feignClient.UserServiceFeignClient;
-import com.erensayar.coccoremsapp.notification.NotificationDto;
-import com.erensayar.coccoremsapp.user.UserDto;
+import com.erensayar.miscampaignservice.service.StreamService;
+import com.erensayar.mscore.campaign.CampaignDto;
+import com.erensayar.mscore.feignClient.UserServiceFeignClient;
+import com.erensayar.mscore.notification.NotificationDto;
+import com.erensayar.mscore.user.UserDto;
 import com.erensayar.core.error.exception.BadRequestException;
 import com.erensayar.core.error.exception.NoContentException;
 import com.erensayar.miscampaignservice.entity.Campaign;
 import com.erensayar.miscampaignservice.repository.CampaignRepository;
-import com.erensayar.miscampaignservice.service.CampaignNotificationService;
 import com.erensayar.miscampaignservice.service.CampaignService;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -23,7 +23,7 @@ public class CampaignServiceImpl implements CampaignService {
   private final CampaignRepository campaignRepository;
   private final ModelMapper modelMapper;
   private final UserServiceFeignClient userServiceFeignClient;
-  private final CampaignNotificationService campaignNotificationService;
+  private final StreamService streamService;
 
   @Override
   public List<CampaignDto> getCampaigns() {
@@ -53,8 +53,7 @@ public class CampaignServiceImpl implements CampaignService {
     // Get Users By Product
     List<UserDto> user = userServiceFeignClient.getUsersByProductIdList(campaignDto.getProductIdList()).getBody();
     // Build NotificationDto And Push Notification
-    // TODO: Bu hali ise yaramaz. Burda her bir kullanici icin notification olustur ve oyle at kuyruga
-    campaignNotificationService.pushCampaignNotification(NotificationDto.builder()
+    streamService.produce(NotificationDto.builder()
         .campaign(campaignDto)
         .users(user)
         .build());

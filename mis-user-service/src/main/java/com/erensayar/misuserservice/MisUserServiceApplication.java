@@ -1,8 +1,8 @@
 package com.erensayar.misuserservice;
 
-import com.erensayar.coccoremsapp.feignClient.CampaignServiceFeignClient;
-import com.erensayar.coccoremsapp.feignClient.NotificationServiceFeignClient;
-import com.erensayar.coccoremsapp.feignClient.ProductServiceFeignClient;
+import com.erensayar.mscore.feignClient.CampaignServiceFeignClient;
+import com.erensayar.mscore.feignClient.NotificationServiceFeignClient;
+import com.erensayar.mscore.feignClient.ProductServiceFeignClient;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.config.Configuration.AccessLevel;
 import org.springframework.boot.SpringApplication;

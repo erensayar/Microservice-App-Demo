@@ -1,7 +1,7 @@
 package com.erensayar.miscampaignservice.controller;
 
-import com.erensayar.coccoremsapp.campaign.CampaignDto;
-import com.erensayar.coccoremsapp.feignClient.CampaignServiceBase;
+import com.erensayar.mscore.campaign.CampaignDto;
+import com.erensayar.mscore.feignClient.CampaignServiceBase;
 import com.erensayar.miscampaignservice.service.CampaignService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;

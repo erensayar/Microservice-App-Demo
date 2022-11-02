@@ -1,7 +1,7 @@
 package com.erensayar.misproductservice.controller;
 
-import com.erensayar.coccoremsapp.product.ProductDto;
-import com.erensayar.coccoremsapp.feignClient.ProductServiceBase;
+import com.erensayar.mscore.product.ProductDto;
+import com.erensayar.mscore.feignClient.ProductServiceBase;
 import com.erensayar.misproductservice.service.ProductService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
