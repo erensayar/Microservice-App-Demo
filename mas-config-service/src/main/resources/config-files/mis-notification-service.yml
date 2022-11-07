@@ -18,9 +18,9 @@ spring:
   #        destination: campaign-query # (internal) for communication with campaign module
   #      output:
   #        destination: notification-query # (external) for send notifications to customers
-  rabbitmq:
-    username: ${RABBIT_MQ_USERNAME:admin}
-    password: ${RABBIT_MQ_PASSWORD:admin}
+  #rabbitmq:
+  #  username: ${RABBIT_MQ_USERNAME:admin}
+  #  password: ${RABBIT_MQ_PASSWORD:admin}
 
   datasource:
     username: sa
@@ -45,7 +45,7 @@ eureka:
       defaultZone: ${EUREKA_SERVICE_URL:http://localhost:7001}/eureka
 
 api:
-  rabbit-mq:
+  rabbit-mq: # rabbit disabled on v2 version
     exchange:
       direct: ms.api.direct
       topic: ms.api.topic
@@ -55,3 +55,13 @@ api:
     routing-key:
       campaign: ms.api.campaign-routing-key
       notification: ms.api.notification-routing-key
+  kafka:
+    address: 127.0.0.1:9092
+    group.id: ms-group
+    topic:
+      campaign: ms.api.campaign-topic
+      notification: ms.api.notification-topic
+
+logging:
+  pattern:
+    console: "%clr(%d{HH:mm:ss.SSS}){blue} %clr(---){faint} %clr([%15.15t]){yellow} %clr(:){red} %clr(%m){faint}%n"

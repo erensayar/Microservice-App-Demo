@@ -1,8 +1,8 @@
 package com.erensayar.misnotificationservice.controller;
 
-import com.erensayar.coccoremsapp.feignClient.NotificationServiceBase;
-import com.erensayar.coccoremsapp.notification.NotificationDto;
-import com.erensayar.misnotificationservice.service.NotificationProducer;
+import com.erensayar.misnotificationservice.service.StreamService;
+import com.erensayar.mscore.feignClient.NotificationServiceBase;
+import com.erensayar.mscore.notification.NotificationDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class NotificationController implements NotificationServiceBase {
 
-  private final NotificationProducer notificationProducer;
+    private final StreamService streamService;
 
-  @Override
-  public ResponseEntity<String> pushNotification(NotificationDto notificationDto) {
-    notificationProducer.producer(notificationDto);
-    return ResponseEntity.ok(null);
-  }
+    @Override
+    public ResponseEntity<String> pushNotification(NotificationDto notificationDto) {
+        streamService.produce(notificationDto);
+        return ResponseEntity.ok(null);
+    }
 
 }

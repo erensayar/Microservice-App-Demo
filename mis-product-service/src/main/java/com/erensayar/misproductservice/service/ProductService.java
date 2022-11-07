@@ -1,6 +1,6 @@
 package com.erensayar.misproductservice.service;
 
-import com.erensayar.coccoremsapp.product.ProductDto;
+import com.erensayar.mscore.product.ProductDto;
 import java.util.List;
 
 public interface ProductService {

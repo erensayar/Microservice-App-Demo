@@ -1,6 +1,6 @@
 package com.erensayar.misproductservice.service.Implementation;
 
-import com.erensayar.coccoremsapp.product.ProductDto;
+import com.erensayar.mscore.product.ProductDto;
 import com.erensayar.core.error.exception.BadRequestException;
 import com.erensayar.core.error.exception.NoContentException;
 import com.erensayar.misproductservice.entity.Product;

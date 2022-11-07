@@ -11,9 +11,7 @@
   <description>Microservice App Demo</description>
 
   <modules>
-    <!-- <module>coc-cloud-parent</module> -->
-    <!-- <module>coc-cloud-top-parent</module> -->
-    <!-- <module>coc-core-ms-app</module> -->
+    <module>mscore</module>
     <module>api-gateway-service</module>
     <module>mas-admin-service</module>
     <module>mas-config-service</module>
