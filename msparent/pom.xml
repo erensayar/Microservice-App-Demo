@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.erensayar</groupId>
+        <artifactId>coc-cloud-parent</artifactId>
+        <version>1.0.0</version>
+        <relativePath/>
+    </parent>
+
+    <artifactId>msparent</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+    <name>msparent</name>
+    <description>Provide common dependencies for just this project</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>17</java.version>
+        <mscore.version>1.0.0</mscore.version>
+    </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.erensayar</groupId>
+            <artifactId>mscore</artifactId>
+            <version>${mscore.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
+
+

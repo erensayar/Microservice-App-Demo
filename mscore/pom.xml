@@ -6,15 +6,15 @@
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>2.7.1</version>
+    <version>2.7.5</version>
     <relativePath/>
   </parent>
 
   <groupId>com.erensayar</groupId>
-  <artifactId>coc-core-ms-app</artifactId>
+  <artifactId>mscore</artifactId>
   <version>1.0.0</version>
-  <name>coc-core-ms-app</name>
-  <description>coc-core-ms-app</description>
+  <name>mscore</name>
+  <description>mscore</description>
 
   <properties>
     <java.version>17</java.version>

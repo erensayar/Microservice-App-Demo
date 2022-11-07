@@ -12,6 +12,7 @@
 
   <modules>
     <module>mscore</module>
+    <module>msparent</module>
     <module>api-gateway-service</module>
     <module>mas-admin-service</module>
     <module>mas-config-service</module>
