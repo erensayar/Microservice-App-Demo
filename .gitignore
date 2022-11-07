@@ -75,6 +75,10 @@ Thumbs.db
 logs/
 *.log
 
+### Drawio ###
+*.bkp
+*.dtmp
+
 ### MISC ###
 HELP.md
 Archive/
