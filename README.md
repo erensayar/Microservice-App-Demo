@@ -1,7 +1,7 @@
 # Development Continues
 
 * It is not the final state
-* Almost done
+* Authority control structure is currently being developed
 
 ---
 
@@ -43,6 +43,11 @@ This project microservice architecture implementation trying on spring cloud eco
 # Working Principle
 
 ![WorkingPrinciple](dev-docs/images/ss-purpose-and-query-structure.png)
+
+# Auth Structure For Ms App
+
+![WorkingPrinciple](dev-docs/images/authStructureForMsApp.png)
+
 
 # Logic
 
