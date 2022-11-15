@@ -31,7 +31,8 @@ This project microservice architecture implementation trying on spring cloud eco
   |-------------------------------|--------------------------------------------------------------|--------------------------------------------------------------|
   | <b> coc-cloud-top-parent </b> | Pom should be exist in .m2 local folder. (mvn clean install) | https://github.com/erensayar/common-components               |
   | <b> coc-cloud-parent </b>     | Pom should be exist in .m2 local folder. (mvn clean install) | https://github.com/erensayar/common-components               |
-  | <b> mscore </b>      | Jar should be exist in .m2 local folder. (mvn clean install) | In this Repo                                                 |
+  | <b> msparent </b>             | Pom should be exist in .m2 local folder. (mvn clean install) | In this Repo                                                 |
+  | <b> mscore </b>               | Jar should be exist in .m2 local folder. (mvn clean install) | In this Repo                                                 |
   | <b> coc-core </b>             | Jar should be exist in .m2 local folder. (mvn clean install) | https://github.com/erensayar/common-components               |
 
 
