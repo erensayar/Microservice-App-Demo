@@ -1,12 +1,12 @@
 server:
-  port: ${USER_SERVICE_PORT:8000}
+  port: ${ACCOUNT_SERVICE_PORT:8000}
 
 spring:
   application:
-    name: mis-user-service
+    name: mis-account-service
   datasource:
     username: sa
-    url: jdbc:h2:mem:user-db
+    url: jdbc:h2:mem:account-db
   h2:
     console:
       enabled: true

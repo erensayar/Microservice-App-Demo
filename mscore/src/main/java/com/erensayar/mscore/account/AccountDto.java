@@ -1,4 +1,4 @@
-package com.erensayar.mscore.user;
+package com.erensayar.mscore.account;
 
 import java.io.Serializable;
 import java.util.List;
@@ -15,7 +15,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @Builder
 @ToString
-public class UserDto implements Serializable {
+public class AccountDto implements Serializable {
   private Long id;
   private String name;
   private String surname;

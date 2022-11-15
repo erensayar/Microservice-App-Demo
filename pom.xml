@@ -21,7 +21,7 @@
     <module>mis-campaign-service</module>
     <module>mis-notification-service</module>
     <module>mis-product-service</module>
-    <module>mis-user-service</module>
+    <module>mis-account-service</module>
   </modules>
 
 </project>

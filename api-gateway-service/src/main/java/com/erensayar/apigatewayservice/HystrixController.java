@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/exc")
 public class HystrixController {
 
-  @GetMapping("/users")
-  public String userFallback() {
-    return "User Service is not available.";
+  @GetMapping("/accounts")
+  public String accountFallback() {
+    return "Account Service is not available.";
   }
 
   @GetMapping("/campaigns")

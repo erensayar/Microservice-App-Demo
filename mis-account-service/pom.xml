@@ -10,10 +10,10 @@
     <relativePath/>
   </parent>
 
-  <artifactId>mis-user-service</artifactId>
+  <artifactId>mis-account-service</artifactId>
   <version>1.0.0</version>
-  <name>mis-user-service</name>
-  <description>mis-user-service</description>
+  <name>mis-account-service</name>
+  <description>mis-account-service</description>
 
   <build>
     <plugins>
@@ -26,7 +26,7 @@
               <goal>repackage</goal>
             </goals>
             <configuration>
-              <mainClass>com.erensayar.misuserservice.MisUserServiceApplication</mainClass>
+              <mainClass>com.erensayar.misaccountservice.MisAccountServiceApplication</mainClass>
             </configuration>
           </execution>
         </executions>

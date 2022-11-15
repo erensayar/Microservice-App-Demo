@@ -10,16 +10,16 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: mis-user-service
-          uri: lb://mis-user-service
+        - id: mis-account-service
+          uri: lb://mis-account-service
           predicates:
-            - Path=/users/**
+            - Path=/accounts/**
           #filters:
           #  - RewritePath=/(?<segment>.*), /$\{segment}
           #  - name: Hystrix
           #    args:
-          #      name: mis-user-service
-          #      fallbackUri: forward:/exc/users
+          #      name: mis-account-service
+          #      fallbackUri: forward:/exc/accounts
 
         - id: mis-campaign-service
           uri: lb://mis-campaign-service
@@ -84,9 +84,9 @@ management:
 #  prefix: /api/v1
 #  routes:
 #    ignoredServices: '*'
-#    mis-user-service:
-#      path: /users/**
-#      serviceId: MIS-USER-SERVICE
+#    mis-accounts-service:
+#      path: /accounts/**
+#      serviceId: MIS-ACCOUNT-SERVICE
 #    mis-campaign-service:
 #      path: /campaigns/**
 #      serviceId: MIS-CAMPAIGN-SERVICE

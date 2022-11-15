@@ -74,8 +74,8 @@ In project root directory:
 
 | REPOSITORY                      | TAG          | SIZE    |
 |---------------------------------|--------------|---------|
-| ms-app-mis-user-service         | 1.0.0        | 256MB   |
-| ms-app-mis-user-service         | latest       | 256MB   |
+| ms-app-mis-account-service         | 1.0.0        | 256MB   |
+| ms-app-mis-account-service         | latest       | 256MB   |
 | ms-app-mis-product-service      | 1.0.0        | 256MB   |
 | ms-app-mis-product-service      | latest       | 256MB   |
 | ms-app-mis-notification-service | 1.0.0        | 258MB   |
@@ -124,7 +124,7 @@ In project root directory:
 
 # DB URL
 
-* User : jdbc:h2:mem:user-db
+* User : jdbc:h2:mem:account-db
 * Product : jdbc:h2:mem:product-db
 * Notification : jdbc:h2:mem:notification-db
 * Campaign : jdbc:h2:mem:campaign-db
@@ -133,15 +133,15 @@ In project root directory:
 
 (These are not necessary for now)
 
-<b>USER</b>
+<b>ACCOUNT</b>
 
 | ID  |  EMAIL         | NAME          | PHONE           | SURNAME          |
 |-----|----------------|---------------|-----------------|------------------|
-| 1   | user1@mail.com | user-1-name   | +905552223344   | user-1-surname   |
-| 2   | user2@mail.com | user-2-name   | +905552223344   | user-2-surname   |
-| 3   | user4@mail.com | user-3-name   | +905552223344   | user-3-surname   |
-| 4   | user4@mail.com | user-4-name   | +905552223344   | user-4-surname   |
-| 5   | user5@mail.com | user-5-name   | +905552223344   | user-5-surname   |
+| 1   | account1@mail.com | account-1-name   | +905552223344   | account-1-surname   |
+| 2   | account2@mail.com | account-2-name   | +905552223344   | account-2-surname   |
+| 3   | account4@mail.com | account-3-name   | +905552223344   | account-3-surname   |
+| 4   | account4@mail.com | account-4-name   | +905552223344   | account-4-surname   |
+| 5   | account5@mail.com | account-5-name   | +905552223344   | account-5-surname   |
 
 <b>Product</b>
 

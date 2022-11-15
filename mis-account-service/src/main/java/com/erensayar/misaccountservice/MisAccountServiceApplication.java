@@ -1,4 +1,4 @@
-package com.erensayar.misuserservice;
+package com.erensayar.misaccountservice;
 
 import com.erensayar.mscore.feignClient.CampaignServiceFeignClient;
 import com.erensayar.mscore.feignClient.NotificationServiceFeignClient;
@@ -18,10 +18,10 @@ import org.springframework.context.annotation.Bean;
 })
 @SpringBootApplication
 @EnableDiscoveryClient
-public class MisUserServiceApplication {
+public class MisAccountServiceApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(MisUserServiceApplication.class, args);
+    SpringApplication.run(MisAccountServiceApplication.class, args);
   }
 
   @Bean
