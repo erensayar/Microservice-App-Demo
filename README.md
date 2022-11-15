@@ -74,8 +74,8 @@ In project root directory:
 
 | REPOSITORY                      | TAG          | SIZE    |
 |---------------------------------|--------------|---------|
-| ms-app-mis-account-service         | 1.0.0        | 256MB   |
-| ms-app-mis-account-service         | latest       | 256MB   |
+| ms-app-mis-account-service      | 1.0.0        | 256MB   |
+| ms-app-mis-account-service      | latest       | 256MB   |
 | ms-app-mis-product-service      | 1.0.0        | 256MB   |
 | ms-app-mis-product-service      | latest       | 256MB   |
 | ms-app-mis-notification-service | 1.0.0        | 258MB   |
@@ -135,13 +135,13 @@ In project root directory:
 
 <b>ACCOUNT</b>
 
-| ID  |  EMAIL         | NAME          | PHONE           | SURNAME          |
-|-----|----------------|---------------|-----------------|------------------|
-| 1   | account1@mail.com | account-1-name   | +905552223344   | account-1-surname   |
-| 2   | account2@mail.com | account-2-name   | +905552223344   | account-2-surname   |
-| 3   | account4@mail.com | account-3-name   | +905552223344   | account-3-surname   |
-| 4   | account4@mail.com | account-4-name   | +905552223344   | account-4-surname   |
-| 5   | account5@mail.com | account-5-name   | +905552223344   | account-5-surname   |
+| ID    | EMAIL              | NAME            | PHONE             | SURNAME            |
+|-------|--------------------|-----------------|-------------------|--------------------|
+| 1     | account1@mail.com  | account-1-name  | +905552223344     | account-1-surname  |
+| 2     | account2@mail.com  | account-2-name  | +905552223344     | account-2-surname  |
+| 3     | account4@mail.com  | account-3-name  | +905552223344     | account-3-surname  |
+| 4     | account4@mail.com  | account-4-name  | +905552223344     | account-4-surname  |
+| 5     | account5@mail.com  | account-5-name  | +905552223344     | account-5-surname  |
 
 <b>Product</b>
 
