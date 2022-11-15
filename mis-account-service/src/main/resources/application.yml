@@ -1,5 +1,5 @@
 spring:
   application:
-    name: mis-user-service
+    name: mis-account-service
   config:
     import: configserver:${CONFIG_SERVICE_URL:http://localhost:7000}

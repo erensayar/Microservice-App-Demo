@@ -2,7 +2,7 @@ package com.erensayar.misproductservice;
 
 import com.erensayar.mscore.feignClient.CampaignServiceFeignClient;
 import com.erensayar.mscore.feignClient.NotificationServiceFeignClient;
-import com.erensayar.mscore.feignClient.UserServiceFeignClient;
+import com.erensayar.mscore.feignClient.AccountServiceFeignClient;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.config.Configuration.AccessLevel;
 import org.springframework.boot.SpringApplication;
@@ -12,7 +12,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
 @EnableFeignClients(basePackageClasses = {
-    UserServiceFeignClient.class,
+    AccountServiceFeignClient.class,
     NotificationServiceFeignClient.class,
     CampaignServiceFeignClient.class
 })

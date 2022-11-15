@@ -2,9 +2,9 @@ package com.erensayar.miscampaignservice.service.implementation;
 
 import com.erensayar.miscampaignservice.service.StreamService;
 import com.erensayar.mscore.campaign.CampaignDto;
-import com.erensayar.mscore.feignClient.UserServiceFeignClient;
+import com.erensayar.mscore.feignClient.AccountServiceFeignClient;
 import com.erensayar.mscore.notification.NotificationDto;
-import com.erensayar.mscore.user.UserDto;
+import com.erensayar.mscore.account.AccountDto;
 import com.erensayar.core.error.exception.BadRequestException;
 import com.erensayar.core.error.exception.NoContentException;
 import com.erensayar.miscampaignservice.entity.Campaign;
@@ -22,7 +22,7 @@ public class CampaignServiceImpl implements CampaignService {
 
   private final CampaignRepository campaignRepository;
   private final ModelMapper modelMapper;
-  private final UserServiceFeignClient userServiceFeignClient;
+  private final AccountServiceFeignClient accountServiceFeignClient;
   private final StreamService streamService;
 
   @Override
@@ -50,12 +50,12 @@ public class CampaignServiceImpl implements CampaignService {
   }
 
   private void pushNotification(CampaignDto campaignDto) {
-    // Get Users By Product
-    List<UserDto> user = userServiceFeignClient.getUsersByProductIdList(campaignDto.getProductIdList()).getBody();
+    // Get Accounts By Product
+    List<AccountDto> account = accountServiceFeignClient.getAccountsByProductIdList(campaignDto.getProductIdList()).getBody();
     // Build NotificationDto And Push Notification
     streamService.produce(NotificationDto.builder()
         .campaign(campaignDto)
-        .users(user)
+        .accounts(account)
         .build());
   }
 

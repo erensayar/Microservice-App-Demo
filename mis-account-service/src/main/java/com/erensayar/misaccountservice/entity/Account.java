@@ -1,4 +1,4 @@
-package com.erensayar.misuserservice.entity;
+package com.erensayar.misaccountservice.entity;
 
 import java.util.List;
 import javax.persistence.ElementCollection;
@@ -17,9 +17,9 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name = "USERS")
+@Table(name = "ACCOUNT")
 @Entity
-public class User {
+public class Account {
 
   @Id
   private Long id;
@@ -33,7 +33,7 @@ public class User {
   private String phone;
 
   @ElementCollection
-  @JoinTable(name = "RLT_USER_PRODUCT")
+  @JoinTable(name = "RLT_ACCOUNT_PRODUCT")
   private List<Long> productId;
 
 }

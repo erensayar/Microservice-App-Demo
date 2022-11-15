@@ -13,7 +13,7 @@ services:
     image: rabbitmq:3-management-alpine
     #image: 'rabbitmq:3.8-management-alpine'
     environment:
-      - RABBITMQ_DEFAULT_USER=admin
+      - RABBITMQ_DEFAULT_ACCOUNT=admin
       - RABBITMQ_DEFAULT_PASS=admin
     #volumes:
     #  - /opt/docker-volume/rabbitmq/lib:/var/lib/rabbitmq/
@@ -76,16 +76,16 @@ services:
     ports:
       - ${API_GW_SERVICE_HOST_PORT}:${API_GW_SERVICE_PORT}
 
-  user-service:
-    container_name: mis-user-service
-    image: 'ms-app-mis-user-service'
+  account-service:
+    container_name: mis-account-service
+    image: 'ms-app-mis-account-service'
     environment:
-      - USER_SERVICE_PORT=${MIS_USER_SERVICE_PORT}
+      - ACCOUNT_SERVICE_PORT=${MIS_ACCOUNT_SERVICE_PORT}
       - CONFIG_SERVICE_URL=mas-config-service:${MAS_CONFIG_SERVICE_PORT}
       - ADMIN_SERVICE_URL=mas-admin-service:${MAS_ADMIN_SERVICE_PORT}
       - EUREKA_SERVICE_URL=mas-eureka-service:${MAS_EUREKA_SERVICE_PORT}
     ports:
-      - ${MIS_USER_SERVICE_HOST_PORT}:${MIS_USER_SERVICE_PORT}
+      - ${MIS_ACCOUNT_SERVICE_HOST_PORT}:${MIS_ACCOUNT_SERVICE_PORT}
 
   campaign-service:
     container_name: mis-campaign-service

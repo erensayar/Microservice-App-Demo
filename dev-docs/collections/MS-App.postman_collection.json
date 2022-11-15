@@ -10,7 +10,7 @@
 			"name": "Api GW",
 			"item": [
 				{
-					"name": "User Service From Api Gw",
+					"name": "Account Service From Api Gw",
 					"item": [
 						{
 							"name": "Get All",
@@ -27,15 +27,15 @@
 									}
 								},
 								"url": {
-									"raw": "{{api_gw_service_base_url}}/api/v1/users/getUsersByProductIdList",
+									"raw": "{{api_gw_service_base_url}}/api/v1/accounts/getAccountsByProductIdList",
 									"host": [
 										"{{api_gw_service_base_url}}"
 									],
 									"path": [
 										"api",
 										"v1",
-										"users",
-										"getUsersByProductIdList"
+										"accounts",
+										"getAccountsByProductIdList"
 									]
 								}
 							},
@@ -55,15 +55,15 @@
 											}
 										},
 										"url": {
-											"raw": "{{user_service_base_url}}/api/v1/users/getUsersByProductIdList",
+											"raw": "{{account_service_base_url}}/api/v1/accounts/getAccountsByProductIdList",
 											"host": [
-												"{{user_service_base_url}}"
+												"{{account_service_base_url}}"
 											],
 											"path": [
 												"api",
 												"v1",
-												"users",
-												"getUsersByProductIdList"
+												"accounts",
+												"getAccountsByProductIdList"
 											]
 										}
 									},
@@ -93,7 +93,7 @@
 										}
 									],
 									"cookie": [],
-									"body": "[\n    {\n        \"id\": 2,\n        \"name\": \"user-2-name\",\n        \"surname\": \"user-2-surname\",\n        \"email\": \"user2@mail.com\",\n        \"phone\": \"+905552223344\",\n        \"productIdList\": [\n            1,\n            3\n        ]\n    },\n    {\n        \"id\": 1,\n        \"name\": \"user-1-name\",\n        \"surname\": \"user-1-surname\",\n        \"email\": \"user1@mail.com\",\n        \"phone\": \"+905552223344\",\n        \"productIdList\": [\n            1,\n            2,\n            3\n        ]\n    },\n    {\n        \"id\": 4,\n        \"name\": \"user-4-name\",\n        \"surname\": \"user-4-surname\",\n        \"email\": \"user4@mail.com\",\n        \"phone\": \"+905552223344\",\n        \"productIdList\": [\n            1,\n            2,\n            3,\n            4\n        ]\n    },\n    {\n        \"id\": 3,\n        \"name\": \"user-3-name\",\n        \"surname\": \"user-3-surname\",\n        \"email\": \"user4@mail.com\",\n        \"phone\": \"+905552223344\",\n        \"productIdList\": [\n            1,\n            2,\n            3,\n            4,\n            5\n        ]\n    }\n]"
+									"body": "[\n    {\n        \"id\": 2,\n        \"name\": \"account-2-name\",\n        \"surname\": \"account-2-surname\",\n        \"email\": \"account2@mail.com\",\n        \"phone\": \"+905552223344\",\n        \"productIdList\": [\n            1,\n            3\n        ]\n    },\n    {\n        \"id\": 1,\n        \"name\": \"account-1-name\",\n        \"surname\": \"account-1-surname\",\n        \"email\": \"account1@mail.com\",\n        \"phone\": \"+905552223344\",\n        \"productIdList\": [\n            1,\n            2,\n            3\n        ]\n    },\n    {\n        \"id\": 4,\n        \"name\": \"account-4-name\",\n        \"surname\": \"account-4-surname\",\n        \"email\": \"account4@mail.com\",\n        \"phone\": \"+905552223344\",\n        \"productIdList\": [\n            1,\n            2,\n            3,\n            4\n        ]\n    },\n    {\n        \"id\": 3,\n        \"name\": \"account-3-name\",\n        \"surname\": \"account-3-surname\",\n        \"email\": \"account4@mail.com\",\n        \"phone\": \"+905552223344\",\n        \"productIdList\": [\n            1,\n            2,\n            3,\n            4,\n            5\n        ]\n    }\n]"
 								}
 							]
 						}
@@ -169,7 +169,7 @@
 			]
 		},
 		{
-			"name": "User Service",
+			"name": "Account Service",
 			"item": [
 				{
 					"name": "Get All",
@@ -186,15 +186,15 @@
 							}
 						},
 						"url": {
-							"raw": "{{user_service_base_url}}/api/v1/users/getUsersByProductIdList",
+							"raw": "{{account_service_base_url}}/api/v1/accounts/getAccountsByProductIdList",
 							"host": [
-								"{{user_service_base_url}}"
+								"{{account_service_base_url}}"
 							],
 							"path": [
 								"api",
 								"v1",
-								"users",
-								"getUsersByProductIdList"
+								"accounts",
+								"getAccountsByProductIdList"
 							]
 						}
 					},
@@ -214,15 +214,15 @@
 									}
 								},
 								"url": {
-									"raw": "{{user_service_base_url}}/api/v1/users/getUsersByProductIdList",
+									"raw": "{{account_service_base_url}}/api/v1/accounts/getAccountsByProductIdList",
 									"host": [
-										"{{user_service_base_url}}"
+										"{{account_service_base_url}}"
 									],
 									"path": [
 										"api",
 										"v1",
-										"users",
-										"getUsersByProductIdList"
+										"accounts",
+										"getAccountsByProductIdList"
 									]
 								}
 							},
@@ -252,7 +252,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "[\n    {\n        \"id\": 2,\n        \"name\": \"user-2-name\",\n        \"surname\": \"user-2-surname\",\n        \"email\": \"user2@mail.com\",\n        \"phone\": \"+905552223344\",\n        \"productIdList\": [\n            1,\n            3\n        ]\n    },\n    {\n        \"id\": 1,\n        \"name\": \"user-1-name\",\n        \"surname\": \"user-1-surname\",\n        \"email\": \"user1@mail.com\",\n        \"phone\": \"+905552223344\",\n        \"productIdList\": [\n            1,\n            2,\n            3\n        ]\n    },\n    {\n        \"id\": 4,\n        \"name\": \"user-4-name\",\n        \"surname\": \"user-4-surname\",\n        \"email\": \"user4@mail.com\",\n        \"phone\": \"+905552223344\",\n        \"productIdList\": [\n            1,\n            2,\n            3,\n            4\n        ]\n    },\n    {\n        \"id\": 3,\n        \"name\": \"user-3-name\",\n        \"surname\": \"user-3-surname\",\n        \"email\": \"user4@mail.com\",\n        \"phone\": \"+905552223344\",\n        \"productIdList\": [\n            1,\n            2,\n            3,\n            4,\n            5\n        ]\n    }\n]"
+							"body": "[\n    {\n        \"id\": 2,\n        \"name\": \"account-2-name\",\n        \"surname\": \"account-2-surname\",\n        \"email\": \"account2@mail.com\",\n        \"phone\": \"+905552223344\",\n        \"productIdList\": [\n            1,\n            3\n        ]\n    },\n    {\n        \"id\": 1,\n        \"name\": \"account-1-name\",\n        \"surname\": \"account-1-surname\",\n        \"email\": \"account1@mail.com\",\n        \"phone\": \"+905552223344\",\n        \"productIdList\": [\n            1,\n            2,\n            3\n        ]\n    },\n    {\n        \"id\": 4,\n        \"name\": \"account-4-name\",\n        \"surname\": \"account-4-surname\",\n        \"email\": \"account4@mail.com\",\n        \"phone\": \"+905552223344\",\n        \"productIdList\": [\n            1,\n            2,\n            3,\n            4\n        ]\n    },\n    {\n        \"id\": 3,\n        \"name\": \"account-3-name\",\n        \"surname\": \"account-3-surname\",\n        \"email\": \"account4@mail.com\",\n        \"phone\": \"+905552223344\",\n        \"productIdList\": [\n            1,\n            2,\n            3,\n            4,\n            5\n        ]\n    }\n]"
 						}
 					]
 				}
@@ -353,7 +353,7 @@
 			"type": "string"
 		},
 		{
-			"key": "user_service_base_url",
+			"key": "account_service_base_url",
 			"value": "localhost:8000",
 			"type": "string"
 		},
