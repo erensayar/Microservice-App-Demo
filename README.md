@@ -27,15 +27,15 @@ This project microservice architecture implementation trying on spring cloud eco
 * <b> Zipkin Server </b>    : Available in docker-compose file. Just start the server to trace (Default Port: 9411)
 * <b> Build Dependencies In Order Of Writing </b>  
 
-  | Dependency Or Parent          | Description                                                  | Repository                                                   |         
-  |-------------------------------|--------------------------------------------------------------|--------------------------------------------------------------|
-  | <b> coc-cloud-top-parent </b> | Pom should be exist in .m2 local folder. (mvn clean install) | https://github.com/erensayar/common-components               |
-  | <b> coc-cloud-parent </b>     | Pom should be exist in .m2 local folder. (mvn clean install) | https://github.com/erensayar/common-components               |
-  | <b> msparent </b>             | Pom should be exist in .m2 local folder. (mvn clean install) | In this Repo                                                 |
-  | <b> mscore </b>               | Jar should be exist in .m2 local folder. (mvn clean install) | In this Repo                                                 |
-  | <b> coc-core </b>             | Jar should be exist in .m2 local folder. (mvn clean install) | https://github.com/erensayar/common-components               |
-
-
+  | Dependency Or Parent                                        | Description                                                  | Repository                                                   |         
+  |-------------------------------------------------------------|--------------------------------------------------------------|--------------------------------------------------------------|
+  |  <font color="orange"> **coc-cloud-top-parent** </font>     | Pom should be exist in .m2 local folder. (mvn clean install) | https://github.com/erensayar/common-components               |
+  |  <font color="orange"> **coc-cloud-parent** </font>         | Pom should be exist in .m2 local folder. (mvn clean install) | https://github.com/erensayar/common-components               |
+  |  <font color="orange"> **coc-core** </font>                 | Jar should be exist in .m2 local folder. (mvn clean install) | https://github.com/erensayar/common-components               |
+  |  <font color="orange"> **msparent** </font>                 | Pom should be exist in .m2 local folder. (mvn clean install) | In this Repo                                                 |
+  |  <font color="orange"> **mscore** </font>                   | Jar should be exist in .m2 local folder. (mvn clean install) | In this Repo                                                 |
+  |  <font color="orange"> **coc-boot-parent** </font>          | Jar should be exist in .m2 local folder. (mvn clean install) | https://github.com/erensayar/common-components               |
+  |  <font color="orange"> **coc-auth** </font>                 | Jar should be exist in .m2 local folder. (mvn clean install) | https://github.com/erensayar/common-components               |
 
 # Architecture
 
